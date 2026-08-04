@@ -8,28 +8,30 @@ import PlacementSupport from "./components/PlacementSupport";
 import Testimonials from "./components/Testimonials";
 import HiringCompanies from "./components/HiringCompanies";
 import Placements from "./components/Placements";
+import FAQ from "./components/FAQ";
 import DemoForm from "./components/DemoForm";
+import Contact from "./components/Contact";
 import WhatsAppButton from "./components/WhatsAppButton";
 import Footer from "./components/Footer";
-import FAQ from "./components/FAQ";
 
 export default function Home() {
- return (
-  <>
-    <Navbar />
-    <Hero />
-    <Stats />
-    <WhyChooseUs />
-    <Courses />
-    <LearningJourney />
-    <PlacementSupport />
-    <Testimonials />
-    <HiringCompanies />
-    <Placements />
-    <FAQ />
-    <DemoForm />
-    <WhatsAppButton />
-    <Footer />
-  </>
-);
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <Stats />
+      <WhyChooseUs />
+      <Courses />
+      <LearningJourney />
+      <PlacementSupport />
+      <Testimonials />
+      <HiringCompanies />
+      <Placements />
+      <FAQ />
+      <DemoForm />
+      <Contact />
+      <WhatsAppButton />
+      <Footer />
+    </>
+  );
 }

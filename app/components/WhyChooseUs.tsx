@@ -1,3 +1,5 @@
+import FadeIn from "./FadeIn";
+
 import {
   FaLaptopCode,
   FaBriefcase,
@@ -48,33 +50,36 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-white py-20">
-      <div className="max-w-7xl mx-auto px-6">
-      <h2 className="text-4xl font-extrabold text-center mb-4 text-black">
-          Why Choose Success IT Academy?
-        </h2>
+    <FadeIn>
+      <section id="about" className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 className="mb-4 text-center text-4xl font-extrabold text-black">
+            Why Choose Success IT Academy?
+          </h2>
 
-        <p className="text-center text-gray-600 mb-12">
-          We help you become job-ready with practical training and placement support.
-        </p>
+          <p className="mb-12 text-center text-gray-600">
+            We help you become job-ready with practical training and placement
+            support.
+          </p>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {features.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white border border-gray-200 p-8 rounded-2xl shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
-            >
-              <div className="mb-5">{item.icon}</div>
-              <h3 className="text-xl font-bold text-black mb-3">
-  {item.title}
-</h3>
-              <p className="text-gray-700">
-  {item.description}
-</p>
-            </div>
-          ))}
+          <div className="grid gap-8 md:grid-cols-3">
+            {features.map((item, index) => (
+              <div
+                key={index}
+                className="rounded-2xl border border-gray-200 bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              >
+                <div className="mb-5">{item.icon}</div>
+
+                <h3 className="mb-3 text-xl font-bold text-black">
+                  {item.title}
+                </h3>
+
+                <p className="text-gray-700">{item.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </FadeIn>
   );
 }

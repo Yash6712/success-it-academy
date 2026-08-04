@@ -1,3 +1,5 @@
+import FadeIn from "./FadeIn";
+
 import {
   FaAws,
   FaServer,
@@ -76,50 +78,56 @@ const courses = [
 
 export default function Courses() {
   return (
-    <section className="py-20 bg-slate-100">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center">
-          Our Programs
-        </h2>
+    <FadeIn>
+      <section id="courses" className="bg-slate-100 py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 className="text-center text-4xl font-extrabold text-gray-900">
+            Our Programs
+          </h2>
 
-        <p className="text-center text-gray-600 mt-4 mb-12">
-          Industry-focused training programs designed to make you job-ready.
-        </p>
+          <p className="mb-12 mt-4 text-center text-gray-600">
+            Industry-focused training programs designed to make you job-ready.
+          </p>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {courses.map((course, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-lg p-8 hover:scale-105 hover:shadow-2xl transition duration-300"
-            >
-              <div className="mb-4">{course.icon}</div>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {courses.map((course, index) => (
+              <div
+                key={course.title}
+                className="flex flex-col rounded-2xl border border-gray-200 bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              >
+                <div className="mb-5">{course.icon}</div>
 
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                {course.title}
-              </h3>
+                <h3 className="mb-2 text-2xl font-bold text-gray-900">
+                  {course.title}
+                </h3>
 
-              <p className="text-yellow-600 font-semibold mb-6">
-                Duration: {course.duration}
-              </p>
+                <p className="mb-6 font-semibold text-yellow-600">
+                  Duration: {course.duration}
+                </p>
 
-              <ul className="space-y-2 mb-6">
-                {course.features.map((feature, i) => (
-                  <li
-  key={i}
-  className="text-gray-700 flex items-center gap-2"
->
-  ✅ {feature}
-</li>
-                ))}
-              </ul>
+                <ul className="mb-8 flex-1 space-y-3">
+                  {course.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-center gap-3 text-gray-700"
+                    >
+                      <span className="font-bold text-green-600">✓</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
 
-              <button className="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-3 rounded-lg font-semibold">
-                Enroll Now
-              </button>
-            </div>
-          ))}
+                <a
+                  href="#demo"
+                  className="block w-full rounded-lg bg-yellow-500 py-3 text-center font-semibold text-white transition hover:bg-yellow-600"
+                >
+                  Book Free Demo
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </FadeIn>
   );
-} 
+}

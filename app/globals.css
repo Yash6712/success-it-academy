@@ -27,3 +27,26 @@ body {
 html {
   scroll-behavior: smooth;
 }
+@keyframes company-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 0.75rem));
+  }
+}
+
+.company-slider {
+  animation: company-scroll 28s linear infinite;
+}
+
+.company-slider:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .company-slider {
+    animation: none;
+  }
+}
