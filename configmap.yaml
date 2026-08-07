@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: {{ include "success-it-chart.fullname" . }}-config
+  labels:
+    {{- include "success-it-chart.labels" . | nindent 4 }}
+
+data:
+  COMPANY_NAME: {{ .Values.config.companyName | quote }}
+  ENVIRONMENT: {{ .Values.config.environment | quote }}
+  TRAINER: {{ .Values.config.trainer | quote }}

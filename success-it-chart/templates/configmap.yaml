@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: {{ .Release.Name }}-config
+
+data:
+  COMPANY_NAME: {{ .Values.config.companyName | quote }}
+  ENVIRONMENT: {{ .Values.config.environment | quote }}
+  TRAINER: {{ .Values.config.trainer | quote }}

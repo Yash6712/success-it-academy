@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: success-it-academy
+
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: success-it-academy
+
+  template:
+
+    metadata:
+      labels:
+        app: success-it-academy
+
+    spec:
+      containers:
+
+      - name: success-it-academy
+        image: yash6712/success-it-academy:v1
+
+        ports:
+        - containerPort: 3000
+
+        envFrom:
+        - configMapRef:
+            name: success-it-config
