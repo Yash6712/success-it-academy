@@ -2,7 +2,7 @@ replicaCount: 3
 
 image:
   repository: yash6712/success-it-academy
-  tag: v1
+  tag: 97ce863
   pullPolicy: IfNotPresent
 
 service:
