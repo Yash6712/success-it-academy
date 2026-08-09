@@ -102,7 +102,7 @@ export default function Hero() {
               <div>
                 <p className="text-sm text-slate-300">Career Support Program</p>
                 <h2 className="mt-1 text-2xl font-bold">
-                  Success IT Academy
+                  Success IT Academy - CI/CD Demo
                 </h2>
               </div>
 
