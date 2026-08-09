@@ -2,8 +2,9 @@ replicaCount: 3
 
 image:
   repository: yash6712/success-it-academy
-  tag: 97ce863
+  tag: 97ce863166e30fb1aaa827290c4c2ac73ec90511
   pullPolicy: IfNotPresent
+ 
 
 service:
   port: 80
